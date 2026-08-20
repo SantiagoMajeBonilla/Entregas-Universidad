@@ -1,0 +1,243 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+
+
+#encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    background-color: white;
+    border-bottom: 2px solid rgb(220, 220, 220);
+
+    position: relative;
+}
+
+
+
+
+#encabezado h1 {
+    color: #4b4ba0;
+    text-align: center;
+}
+
+
+
+
+.logo {
+    position: absolute;
+    left: 80px;
+
+    text-align: center;
+}
+
+
+/* Imagen del logo */
+
+.logo img {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+
+
+.contenedor-medicos {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    padding: 10px;
+}
+
+
+
+
+.medico {
+
+    min-height: 220px;
+
+    padding: 15px;
+
+    border: 2px solid rgba(100, 100, 100, 0.3);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    box-sizing: border-box;
+}
+
+
+
+
+.medico h2,
+.medico p {
+
+    color: navy;
+
+    text-align: center;
+}
+
+
+
+
+.medico h2 {
+    font-size: 17px;
+}
+
+
+
+
+.medico p {
+    font-size: 11px;
+}
+
+
+
+
+
+
+
+.tarjeta-rosa {
+    background-color: #c05a7c;
+}
+
+
+
+
+.tarjeta-verde {
+    background-color: hsl(78, 55%, 78%);
+}
+
+
+
+
+.tarjeta-azul {
+    background-color: rgb(150, 170, 205);
+}
+
+
+
+
+.imagen-medico {
+    margin-top: 5px;
+}
+
+
+
+
+.imagen-medico img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+
+
+button {
+    background-color: #1976d2;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 3px;
+
+    padding: 8px 15px;
+
+    font-size: 12px;
+
+    font-family: Arial, sans-serif;
+
+    cursor: default;
+}
+
+
+
+
+
+#descripcion {
+
+    margin: 0 10px 10px 10px;
+
+    padding: 20px;
+
+    background-color: #f2e5d3;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+#descripcion h3,
+#descripcion p {
+
+    color: #4b4ba0;
+}
+
+
+#descripcion h3 {
+    font-size: 15px;
+}
+
+
+#descripcion p {
+    font-size: 12px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .contenedor-medicos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    #encabezado h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .logo {
+
+        position: static;
+
+        margin-right: 20px;
+
+    }
+
+}
