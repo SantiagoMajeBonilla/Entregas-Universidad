@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">    
+    <title>Formulario de Captura de Datos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="validacion.js" defer></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+</head>
+
+
+<body>
+    <form class="formulario" id="formularioContacto">
+        <h2>Formulario para el envio de solicitud de contacto</h2>
+        <p class="estilo-parrafo">Este formulario permite registrar una solicitud para que el estudiante se incorpore a 
+            un semillero de su empresa o para que pueda realizar pasantias o practicas en la empresa
+        </p>
+        <label for="identificacion">Tipo de Identificación:</label>
+        <select id="identificacion" name="tipo-identificacion">
+            <option value="" disabled selected>Seleccione un tipo de identificación</option>
+            <option value="cc">Cédula de Ciudadanía</option>
+            <option value="ti">Tarjeta de Identidad</option>
+            <option value="ce">Cédula de Extranjería</option>
+            <option value="pas">Pasaporte</option>
+        </select>
+        <label class="error" id="errorTipoIdentificacion"></label><br>
+
+        <label for="numero-identificacion">Número de Identificación:</label>
+        <input type="text" id="numero-identificacion" name="numero-identificacion" placeholder="Número de identificación">
+        <label class="error" id="errorNumeroIdentificacion"></label><br>
+
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" placeholder="Nombres del usuario">
+        <label class="error" id="errorNombres"></label><br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos del usuario">
+        <label class="error" id="errorApellidos"></label><br>
+
+        <label for="correo-electronico">Correo Electrónico:</label>
+        <input type="email" id="correo-electronico" name="correo-electronico" placeholder="Correo electrónico">
+        <label class="error" id="errorCorreo"></label><br>
+
+        <fieldset class="radio-group">
+            <legend>Género:</legend>
+            <label>
+                <input type="radio" id="femenino" name="genero" value="femenino" >
+                Femenino
+            </label>
+            <label>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                Masculino
+            </label>
+            <label>
+                <input type="radio" id="otro" name="genero" value="otro">
+                Otro
+            </label>
+            <label class="error" id="errorGenero"></label><br>
+        </fieldset>
+
+        <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+        <label class="error" id="errorFechaNacimiento"></label><br>
+
+        <button type="submit" id="btnRegistrar">Registrar</button>        
+        
+    </form>
+</body>
+</html>
