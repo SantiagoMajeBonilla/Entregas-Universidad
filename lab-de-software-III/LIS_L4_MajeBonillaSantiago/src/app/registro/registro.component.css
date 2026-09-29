@@ -1,0 +1,16 @@
+.form-section{
+  background:#fff;
+  border:1px solid #e4ddcf;
+  border-radius:6px;
+  padding:2.2rem;
+  max-width:720px;
+  margin:0 auto;
+}
+.form-section .btn-primary{
+  background-color:var(--verde-bosque);
+  border-color:var(--verde-bosque);
+}
+.form-section .btn-primary:hover{
+  background-color:var(--arcilla);
+  border-color:var(--arcilla);
+}

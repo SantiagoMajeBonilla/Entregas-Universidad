@@ -1,0 +1,17 @@
+<section id="productos" class="section-alt">
+  <div class="container">
+    <h2 class="section-title display-serif">Productos que ofrecemos</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <div class="col" *ngFor="let producto of productos">
+        <div class="product-card card">
+          <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
+          <div class="card-body">
+            <h6 class="card-title">{{ producto.nombre }}</h6>
+            <p class="product-price mb-2">{{ producto.precio }}</p>
+            <button class="btn btn-outline-secondary btn-sm w-100">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

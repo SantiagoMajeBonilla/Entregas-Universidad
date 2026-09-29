@@ -1,0 +1,17 @@
+.navbar-vitalis{
+  background:var(--crema);
+  border-bottom:2px solid var(--verde-bosque);
+}
+.navbar-vitalis .navbar-brand{
+  font-family:'Fraunces', serif;
+  font-weight:700;
+  font-size:1.5rem;
+  color:var(--verde-bosque);
+  letter-spacing:.02em;
+}
+.navbar-vitalis .nav-link{
+  color:var(--tinta);
+  font-weight:500;
+  margin:0 .4rem;
+}
+.navbar-vitalis .nav-link:hover{ color:var(--arcilla); }

@@ -1,0 +1,42 @@
+<section id="medicos" class="section-alt">
+  <div class="container">
+    <h2 class="section-title display-serif">Nuestros médicos</h2>
+
+    <div class="row">
+      <!-- Barra lateral de especialidades: col-12 (xs) / col-sm-2 / col-md-4 -->
+      <div class="col-12 col-sm-2 col-md-4 mb-4 mb-md-0">
+        <div class="sidebar-especialidades">
+          <h5>Especialidades</h5>
+          <div class="list-group" id="listaEspecialidades">
+            <div class="list-group-item"
+                 *ngFor="let esp of especialidades"
+                 [class.active-specialty]="esp.id === especialidadActiva"
+                 (click)="seleccionarEspecialidad(esp)">
+              {{ esp.nombre }}
+            </div>
+          </div>
+          <div id="descripcionEspecialidad">
+            {{ descripcionActual }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Médicos: col-12 (xs) / col-sm-10 / col-md-8 -->
+      <div class="col-12 col-sm-10 col-md-8">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="listaMedicos">
+          <div class="col" *ngFor="let medico of medicos">
+            <div class="doctor-card card border">
+              <img [src]="medico.imagen" class="img-fluid" [alt]="medico.nombre">
+              <div class="card-body">
+                <h6 class="card-title mb-1">{{ medico.nombre }}</h6>
+                <span class="badge badge-specialty mb-2">{{ medico.especialidad }}</span>
+                <p class="card-text small">{{ medico.descripcion }}</p>
+                <button class="btn btn-primary btn-sm">Agendar cita</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

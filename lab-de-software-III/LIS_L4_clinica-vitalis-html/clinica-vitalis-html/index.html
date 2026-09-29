@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Vitalis | Agenda tu cita</title>
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons (para redes sociales) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- Tipografías -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="clinic-header">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <div>
+      <i class="bi bi-telephone-fill me-1"></i> (602) 555-0134
+      <span class="mx-2">|</span>
+      <i class="bi bi-envelope-fill me-1"></i>
+      <a href="mailto:contacto@clinicavitalis.com">contacto@clinicavitalis.com</a>
+    </div>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-md navbar-vitalis sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#inicio">Clínica Vitalis</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Alternar navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+        <li class="nav-item"><a class="nav-link" href="#promociones">Promociones</a></li>
+        <li class="nav-item"><a class="nav-link" href="#medicos">Nuestros médicos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ SECCIÓN 1: CARRUSEL DE PROMOCIONES ============ -->
+<section id="promociones">
+  <div class="container">
+    <h2 class="section-title display-serif">Promociones de la clínica</h2>
+
+    <div class="carousel-wrapper">
+      <div id="carouselPromos" class="carousel slide shadow-sm" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselPromos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Promoción 1"></button>
+          <button type="button" data-bs-target="#carouselPromos" data-bs-slide-to="1" aria-label="Promoción 2"></button>
+          <button type="button" data-bs-target="#carouselPromos" data-bs-slide-to="2" aria-label="Promoción 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=1200&h=500&fit=crop" class="d-block" alt="Chequeo general">
+            <div class="carousel-caption">
+              <h3>Chequeo general -30%</h3>
+              <p>Valoración completa con nuestros especialistas durante todo el mes.</p>
+              <a href="#registro" class="btn btn-sm" style="background:var(--arcilla); color:#fff;">Agendar ahora</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=500&fit=crop" class="d-block" alt="Terapia física">
+            <div class="carousel-caption">
+              <h3>Paquete de fisioterapia</h3>
+              <p>5 sesiones + evaluación postural sin costo adicional.</p>
+              <a href="#registro" class="btn btn-sm" style="background:var(--arcilla); color:#fff;">Agendar ahora</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=1200&h=500&fit=crop" class="d-block" alt="Nutrición">
+            <div class="carousel-caption">
+              <h3>Consulta nutricional gratuita</h3>
+              <p>Primera cita sin costo al registrarte esta semana.</p>
+              <a href="#registro" class="btn btn-sm" style="background:var(--arcilla); color:#fff;">Agendar ahora</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromos" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPromos" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECCIÓN 2: MÉDICOS ============ -->
+<section id="medicos" class="section-alt">
+  <div class="container">
+    <h2 class="section-title display-serif">Nuestros médicos</h2>
+
+    <div class="row">
+      <!-- Barra lateral: col-12 (xs) / col-sm-2 / col-md-4 -->
+      <div class="col-12 col-sm-2 col-md-4 mb-4 mb-md-0">
+        <div class="sidebar-especialidades">
+          <h5>Especialidades</h5>
+          <div class="list-group" id="listaEspecialidades">
+            <div class="list-group-item" data-especialidad="neural">Terapia neural</div>
+            <div class="list-group-item" data-especialidad="quiropraxia">Quiropraxia</div>
+            <div class="list-group-item" data-especialidad="fisioterapia">Fisioterapia</div>
+            <div class="list-group-item" data-especialidad="nutricion">Nutrición y Dietética Terapéutica</div>
+          </div>
+          <div id="descripcionEspecialidad">
+            Selecciona una especialidad para ver su descripción.
+          </div>
+        </div>
+      </div>
+
+      <!-- Médicos: col-12 (xs) / col-sm-10 / col-md-8 -->
+      <div class="col-12 col-sm-10 col-md-8">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="listaMedicos">
+
+          <div class="col">
+            <div class="doctor-card card border">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=280&fit=crop" class="img-fluid" alt="Dr. Juan Pérez">
+              <div class="card-body">
+                <h6 class="card-title mb-1">Dr. Juan Pérez</h6>
+                <span class="badge badge-specialty mb-2">Fisioterapia deportiva</span>
+                <p class="card-text small">Comprometido con tu recuperación y tu regreso a la actividad física.</p>
+                <button class="btn btn-primary btn-sm">Agendar cita</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="doctor-card card border">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=280&fit=crop" class="img-fluid" alt="Dra. Catalina Sánchez">
+              <div class="card-body">
+                <h6 class="card-title mb-1">Dra. Catalina Sánchez</h6>
+                <span class="badge badge-specialty mb-2">Quiropraxia</span>
+                <p class="card-text small">La salud de tu columna es fundamental para tu bienestar diario.</p>
+                <button class="btn btn-primary btn-sm">Agendar cita</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="doctor-card card border">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=280&fit=crop" class="img-fluid" alt="Dr. Andrés Cardozo">
+              <div class="card-body">
+                <h6 class="card-title mb-1">Dr. Andrés Cardozo</h6>
+                <span class="badge badge-specialty mb-2">Nutrición y Dietética</span>
+                <p class="card-text small">Un alimento sano alarga la vida y previene enfermedades.</p>
+                <button class="btn btn-primary btn-sm">Agendar cita</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="doctor-card card border">
+              <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?w=400&h=280&fit=crop" class="img-fluid" alt="Dra. Laura Gómez">
+              <div class="card-body">
+                <h6 class="card-title mb-1">Dra. Laura Gómez</h6>
+                <span class="badge badge-specialty mb-2">Terapia neural</span>
+                <p class="card-text small">Tratamientos enfocados en el sistema nervioso y el dolor crónico.</p>
+                <button class="btn btn-primary btn-sm">Agendar cita</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECCIÓN 3: FORMULARIO DE REGISTRO ============ -->
+<section id="registro">
+  <div class="container">
+    <h2 class="section-title display-serif">Regístrate en la clínica</h2>
+
+    <div class="form-section">
+      <p class="text-center mb-4 lead">
+        Completa tus datos. Usaremos tu <strong>correo electrónico</strong> para enviarte un código
+        de confirmación y validar tu registro.
+      </p>
+
+      <div id="mensajeRegistro" class="alert alert-success" role="alert"></div>
+
+      <form id="formRegistro" novalidate>
+
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombres *</label>
+          <input type="text" class="form-control" id="nombre" required>
+          <div class="text-danger small" id="errorNombre"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="apellido" class="form-label">Apellidos *</label>
+          <input type="text" class="form-control" id="apellido" required>
+          <div class="text-danger small" id="errorApellido"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico *</label>
+          <input type="email" class="form-control" id="correo" required>
+          <div class="form-text">Aquí enviaremos tu código de confirmación de registro.</div>
+          <div class="text-danger small" id="errorCorreo"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono *</label>
+          <input type="tel" class="form-control" id="telefono" required>
+          <div class="text-danger small" id="errorTelefono"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="fechaNacimiento" class="form-label">Fecha de nacimiento *</label>
+          <input type="date" class="form-control" id="fechaNacimiento" required>
+          <div class="text-danger small" id="errorFecha"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña *</label>
+          <input type="password" class="form-control" id="password" required minlength="6">
+          <div class="form-text">Mínimo 6 caracteres.</div>
+          <div class="text-danger small" id="errorPassword"></div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label d-block">Género *</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="genero" id="generoF" value="femenino" required>
+            <label class="form-check-label" for="generoF">Femenino</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="genero" id="generoM" value="masculino">
+            <label class="form-check-label" for="generoM">Masculino</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="genero" id="generoOtro" value="otro">
+            <label class="form-check-label" for="generoOtro">Otro</label>
+          </div>
+          <div class="text-danger small" id="errorGenero"></div>
+        </div>
+
+        <div class="mb-4 form-check">
+          <input type="checkbox" class="form-check-input" id="terminos" required>
+          <label class="form-check-label" for="terminos">Acepto los términos y el tratamiento de datos *</label>
+          <div class="text-danger small" id="errorTerminos"></div>
+        </div>
+
+        <div class="d-flex justify-content-start">
+          <button type="button" id="btnRegistrar" class="btn btn-primary">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECCIÓN 4: PRODUCTOS ============ -->
+<section id="productos" class="section-alt">
+  <div class="container">
+    <h2 class="section-title display-serif">Productos que ofrecemos</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+      <div class="col">
+        <div class="product-card card">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&h=200&fit=crop" class="card-img-top" alt="Rodillo de masaje">
+          <div class="card-body">
+            <h6 class="card-title">Rodillo de masaje</h6>
+            <p class="product-price mb-2">$45.000</p>
+            <button class="btn btn-outline-secondary btn-sm w-100">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card card">
+          <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=300&h=200&fit=crop" class="card-img-top" alt="Banda elástica">
+          <div class="card-body">
+            <h6 class="card-title">Banda elástica de resistencia</h6>
+            <p class="product-price mb-2">$28.000</p>
+            <button class="btn btn-outline-secondary btn-sm w-100">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card card">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=300&h=200&fit=crop" class="card-img-top" alt="Suplemento nutricional">
+          <div class="card-body">
+            <h6 class="card-title">Batido proteico natural</h6>
+            <p class="product-price mb-2">$62.000</p>
+            <button class="btn btn-outline-secondary btn-sm w-100">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card card">
+          <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=300&h=200&fit=crop" class="card-img-top" alt="Cojín ortopédico">
+          <div class="card-body">
+            <h6 class="card-title">Cojín ortopédico cervical</h6>
+            <p class="product-price mb-2">$54.000</p>
+            <button class="btn btn-outline-secondary btn-sm w-100">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="pt-5 pb-3">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <h6>Clínica Vitalis</h6>
+        <p class="small">Cuidamos tu salud integral con un equipo de especialistas en terapia neural,
+          quiropraxia, fisioterapia y nutrición.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6>Navegación</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-1"><a href="#promociones">Promociones</a></li>
+          <li class="mb-1"><a href="#medicos">Nuestros médicos</a></li>
+          <li class="mb-1"><a href="#registro">Registro</a></li>
+          <li class="mb-1"><a href="#productos">Productos</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6>Contacto</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-1"><i class="bi bi-geo-alt-fill me-1"></i> Popayán, Cauca, Colombia</li>
+          <li class="mb-1"><i class="bi bi-telephone-fill me-1"></i> (602) 555-0134</li>
+          <li class="mb-1"><i class="bi bi-envelope-fill me-1"></i> contacto@clinicavitalis.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center footer-bottom">
+      &copy; 2026 Clínica Vitalis. Todos los derechos reservados. — Laboratorio 4, Ingeniería del Software III.
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>

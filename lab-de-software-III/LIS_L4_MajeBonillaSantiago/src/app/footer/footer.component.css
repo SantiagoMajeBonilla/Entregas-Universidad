@@ -1,0 +1,18 @@
+footer{
+  background:var(--verde-bosque);
+  color:#EFE6D8;
+}
+footer h6{
+  font-family:'Fraunces', serif;
+  color:#fff;
+  margin-bottom:1rem;
+}
+footer a{ color:#EFE6D8; text-decoration:none; }
+footer a:hover{ color:var(--arcilla); }
+footer .social-icons a{ border-color:rgba(255,255,255,.35); }
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.15);
+  font-size:.85rem;
+  padding-top:1rem;
+  margin-top:2rem;
+}

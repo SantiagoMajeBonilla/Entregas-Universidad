@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-md navbar-vitalis sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#inicio">{{ marca }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Alternar navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+        <li class="nav-item" *ngFor="let opcion of opciones">
+          <a class="nav-link" [href]="opcion.enlace">{{ opcion.texto }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

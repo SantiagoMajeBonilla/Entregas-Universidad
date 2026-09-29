@@ -1,0 +1,57 @@
+.sidebar-especialidades{
+  background:#fff;
+  border:1px solid #e4ddcf;
+  border-radius:6px;
+  padding:1.2rem;
+}
+.sidebar-especialidades h5{
+  font-family:'Fraunces', serif;
+  color:var(--verde-bosque);
+  margin-bottom:1rem;
+}
+.sidebar-especialidades .list-group-item{
+  border:none;
+  padding:.55rem .3rem;
+  background:transparent;
+  color:var(--verde-musgo);
+  font-weight:500;
+  cursor:pointer;
+  border-bottom:1px solid #eee2cd;
+}
+.sidebar-especialidades .list-group-item:last-child{ border-bottom:none; }
+.sidebar-especialidades .list-group-item.active-specialty{
+  color:var(--arcilla);
+  font-weight:600;
+}
+#descripcionEspecialidad{
+  margin-top:1rem;
+  padding-top:1rem;
+  border-top:1px dashed #d8cfba;
+  font-size:.9rem;
+  color:#4b4a42;
+}
+.doctor-card{
+  border:1px solid #e4ddcf;
+  border-radius:6px;
+  background:#fff;
+  height:100%;
+}
+.doctor-card img{
+  border-bottom:3px solid var(--arcilla);
+}
+.doctor-card .card-body{ display:flex; flex-direction:column; }
+.doctor-card .btn-primary{
+  background-color:var(--verde-bosque);
+  border-color:var(--verde-bosque);
+  margin-top:auto;
+}
+.doctor-card .btn-primary:hover{
+  background-color:var(--arcilla);
+  border-color:var(--arcilla);
+}
+.badge-specialty{
+  background:var(--crema);
+  color:var(--verde-musgo);
+  font-weight:500;
+  border:1px solid #e4ddcf;
+}

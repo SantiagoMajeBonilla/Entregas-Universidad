@@ -1,0 +1,94 @@
+<section id="registro">
+  <div class="container">
+    <h2 class="section-title display-serif">Regístrate en la clínica</h2>
+
+    <div class="form-section">
+      <p class="text-center mb-4 lead">
+        Completa tus datos. Usaremos tu <strong>correo electrónico</strong> para enviarte un código
+        de confirmación y validar tu registro.
+      </p>
+
+      <div id="mensajeRegistro" class="alert alert-success" role="alert" *ngIf="mostrarMensaje">
+        {{ mensajeRegistro }}
+      </div>
+
+      <form id="formRegistro" novalidate>
+
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombres *</label>
+          <input type="text" class="form-control" id="nombre" name="nombre"
+                 [(ngModel)]="nombre" [class.is-invalid]="errorNombre" (blur)="validarNombre()">
+          <div class="text-danger small">{{ errorNombre }}</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="apellido" class="form-label">Apellidos *</label>
+          <input type="text" class="form-control" id="apellido" name="apellido"
+                 [(ngModel)]="apellido" [class.is-invalid]="errorApellido" (blur)="validarApellido()">
+          <div class="text-danger small">{{ errorApellido }}</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico *</label>
+          <input type="email" class="form-control" id="correo" name="correo"
+                 [(ngModel)]="correo" [class.is-invalid]="errorCorreo" (blur)="validarCorreo()">
+          <div class="form-text">Aquí enviaremos tu código de confirmación de registro.</div>
+          <div class="text-danger small">{{ errorCorreo }}</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono *</label>
+          <input type="tel" class="form-control" id="telefono" name="telefono"
+                 [(ngModel)]="telefono" [class.is-invalid]="errorTelefono" (blur)="validarTelefono()">
+          <div class="text-danger small">{{ errorTelefono }}</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="fechaNacimiento" class="form-label">Fecha de nacimiento *</label>
+          <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento"
+                 [(ngModel)]="fechaNacimiento" [class.is-invalid]="errorFecha" (blur)="validarFecha()">
+          <div class="text-danger small">{{ errorFecha }}</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña *</label>
+          <input type="password" class="form-control" id="password" name="password" minlength="6"
+                 [(ngModel)]="password" [class.is-invalid]="errorPassword" (blur)="validarPassword()">
+          <div class="form-text">Mínimo 6 caracteres.</div>
+          <div class="text-danger small">{{ errorPassword }}</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label d-block">Género *</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="genero" id="generoF" value="femenino"
+                   [(ngModel)]="genero" (change)="validarGenero()">
+            <label class="form-check-label" for="generoF">Femenino</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="genero" id="generoM" value="masculino"
+                   [(ngModel)]="genero" (change)="validarGenero()">
+            <label class="form-check-label" for="generoM">Masculino</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="genero" id="generoOtro" value="otro"
+                   [(ngModel)]="genero" (change)="validarGenero()">
+            <label class="form-check-label" for="generoOtro">Otro</label>
+          </div>
+          <div class="text-danger small">{{ errorGenero }}</div>
+        </div>
+
+        <div class="mb-4 form-check">
+          <input type="checkbox" class="form-check-input" id="terminos" name="terminos"
+                 [(ngModel)]="terminos" (change)="validarTerminos()">
+          <label class="form-check-label" for="terminos">Acepto los términos y el tratamiento de datos *</label>
+          <div class="text-danger small">{{ errorTerminos }}</div>
+        </div>
+
+        <div class="d-flex justify-content-start">
+          <button type="button" id="btnRegistrar" class="btn btn-primary" (click)="registrar()">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

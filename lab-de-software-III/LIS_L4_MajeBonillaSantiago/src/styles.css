@@ -1,0 +1,42 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root{
+  --verde-bosque:#1F4B43;
+  --verde-musgo:#3F6D5E;
+  --arcilla:#C97B4A;
+  --crema:#F6F1E9;
+  --tinta:#20241F;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  color:var(--tinta);
+  background-color:var(--crema);
+  margin:0;
+}
+h1,h2,h3,.display-serif{
+  font-family:'Fraunces', serif;
+}
+a{ color: var(--verde-bosque); }
+
+.section-title{
+  border-left:5px solid var(--arcilla);
+  padding-left:.75rem;
+  margin-bottom:1.5rem;
+}
+section{ padding:3.5rem 0; }
+.section-alt{ background:#EFE9DA; }
+
+.social-icons a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:30px;height:30px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.4);
+  margin-left:.4rem;
+  color:#EFE6D8 !important;
+  transition:background .2s, color .2s;
+  text-decoration:none;
+}
+.social-icons a:hover{ background:var(--arcilla); border-color:var(--arcilla); color:#fff !important; }

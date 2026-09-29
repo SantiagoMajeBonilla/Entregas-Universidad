@@ -1,0 +1,13 @@
+.product-card{
+  border:1px solid #e4ddcf;
+  border-radius:6px;
+  background:#fff;
+  height:100%;
+}
+.product-card img{ height:180px; object-fit:cover; }
+.product-price{
+  font-family:'Fraunces', serif;
+  color:var(--verde-bosque);
+  font-weight:600;
+  font-size:1.15rem;
+}
